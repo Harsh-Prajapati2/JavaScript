@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM Selectors Practice — HTML Only</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height: 1.5; padding: 24px; }
+    section { border: 1px solid #ddd; border-radius: 10px; padding: 16px; margin: 14px 0; }
+    h2 { margin: 0 0 8px; font-size: 1.1rem; }
+    .note { color: #555; font-size: 0.9rem; }
+    .card { border: 1px solid #ccc; padding: 10px; border-radius: 8px; margin: 6px 0; }
+    table { border-collapse: collapse; width: 100%; }
+    td, th { border: 1px solid #ddd; padding: 8px; }
+    nav a { margin-right: 10px; }
+    .disabled { pointer-events: none; opacity: .5; }
+    .sidebar { background: #fafafa; }
+  </style>
+</head>
+<body>
+  <!--
+    Instructions:
+    You will write ONLY JavaScript (in DevTools Console or a separate JS file) to solve tasks 1–16.
+    Do NOT edit this HTML. Use DOM selectors to find elements and then manipulate them as required.
+
+    Tasks Overview (map to sections below):
+    1) Highlight first <h1> (color red)
+    2) Change button #submitBtn text to "Send"
+    3) Count all <p>
+    4) Log all .product-name texts
+    5) Change #bannerImage src
+    6) Style all <li> inside #menu (bg yellow)
+    7) Autofill input[name="username"] with "JohnDoe"
+    8) Make all .highlight bold
+    9) Move .active class from one nav item to another
+    10) Highlight <p> containing "JavaScript" (bg light green)
+    11) In pricing table, rows with td.price > 100 turn text red
+    12) All required inputs get red border
+    13) All <li> inside .sidebar ul get padding:10px
+    14) Select only 2nd column of every table row and italicize
+    15) In <nav>, select all <a> except .disabled and underline
+    16) Make <label> immediately before required <input> bold
+  -->
+
+  <header>
+    <h1>Storefront — Spring Collection</h1>
+    <h1>News — JavaScript Weekly</h1>
+    <p class="note">Use your JS console to run selectors and test solutions.</p>
+  </header>
+
+  <section id="task-1">
+    <h2>Task 1: Highlight a Heading</h2>
+    <div class="note">Select the first &lt;h1&gt; on the page and set its color to red.</div>
+  </section>
+
+  <section id="task-2">
+    <h2>Task 2: Change Button Text</h2>
+    <button id="submitBtn">Submit</button>
+    <div class="note">Change this button's text to "Send".</div>
+  </section>
+
+  <section id="task-3">
+    <h2>Task 3: Count Paragraphs</h2>
+    <div class="card">
+      <p>Paragraph A about products.</p>
+      <p>Paragraph B mentioning JavaScript in passing.</p>
+      <p>Paragraph C about shipping.</p>
+    </div>
+    <div class="note">Count all &lt;p&gt; elements on the entire page and log the total.</div>
+  </section>
+
+  <section id="task-4">
+    <h2>Task 4: Select by Class</h2>
+    <div class="catalog">
+      <div class="product">
+        <div class="product-name">Green Hoodie</div>
+        <div class="price">79</div>
+      </div>
+      <div class="product">
+        <div class="product-name">Denim Jacket</div>
+        <div class="price">129</div>
+      </div>
+      <div class="product">
+        <div class="product-name">JS Conference Tee</div>
+        <div class="price">35</div>
+      </div>
+    </div>
+    <div class="note">Select all .product-name and log their text.</div>
+  </section>
+
+  <section id="task-5">
+    <h2>Task 5: Change Image Source</h2>
+    <img id="bannerImage" src="https://via.placeholder.com/600x200?text=Old+Banner" alt="Banner" />
+    <div class="note">Update the image src to a different URL (e.g., another placeholder).</div>
+  </section>
+
+  <section id="task-6">
+    <h2>Task 6: Style a List</h2>
+    <ul id="menu">
+      <li>Home</li>
+      <li>Shop</li>
+      <li>Blog</li>
+      <li>Contact</li>
+    </ul>
+    <div class="note">Set background color of all #menu li to yellow.</div>
+  </section>
+
+  <section id="task-7">
+    <h2>Task 7: Form Field Autofill</h2>
+    <form id="loginForm">
+      <label for="usernameInput">Username</label>
+      <input id="usernameInput" name="username" type="text" placeholder="Enter username" />
+
+      <label for="emailInput">Email</label>
+      <input id="emailInput" name="email" type="email" placeholder="you@example.com" />
+    </form>
+    <div class="note">Fill input[name="username"] with "JohnDoe".</div>
+  </section>
+
+  <section id="task-8">
+    <h2>Task 8: Multiple Selection & Styling</h2>
+    <p class="highlight">Featured post</p>
+    <p>Regular post</p>
+    <p class="highlight">Breaking: JavaScript tips</p>
+    <div class="note">Make all .highlight bold.</div>
+  </section>
+
+  <section id="task-9">
+    <h2>Task 9: Toggle Active Menu Item</h2>
+    <nav id="mainNav">
+      <a href="#" class="nav-item active">Home</a>
+      <a href="#" class="nav-item">Products</a>
+      <a href="#" class="nav-item">About</a>
+      <a href="#" class="nav-item">Contact</a>
+    </nav>
+    <div class="note">Remove .active from current item and add it to another (e.g., Products).</div>
+  </section>
+
+  <section id="task-10">
+    <h2>Task 10: Search Filter Highlight</h2>
+    <div class="articles">
+      <p>We love CSS tricks and HTML semantics.</p>
+      <p>JavaScript makes the web dynamic and fun.</p>
+      <p>TypeScript adds types to JavaScript for safety.</p>
+      <p>Accessibility is essential for inclusive design.</p>
+    </div>
+    <div class="note">Find all &lt;p&gt; containing the word "JavaScript" (case-sensitive) and set a light green background.</div>
+  </section>
+
+  <section id="task-11">
+    <h2>Task 11: Dynamic Table Highlight</h2>
+    <table id="pricingTable">
+      <thead>
+        <tr><th>Item</th><th class="col-price">Price</th><th>Stock</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Headphones</td><td class="price">99</td><td>12</td></tr>
+        <tr><td>Keyboard</td><td class="price">120</td><td>5</td></tr>
+        <tr><td>Monitor</td><td class="price">210</td><td>3</td></tr>
+        <tr><td>Mouse</td><td class="price">49</td><td>30</td></tr>
+      </tbody>
+    </table>
+    <div class="note">Select rows where td.price &gt; 100 and make that row's text red.</div>
+  </section>
+
+  <section id="task-12">
+    <h2>Task 12: Mark Required Fields</h2>
+    <form id="checkoutForm">
+      <label for="fullName">Full Name</label>
+      <input id="fullName" name="fullName" type="text" required />
+
+      <label for="address">Address</label>
+      <input id="address" name="address" type="text" />
+
+      <label for="city">City</label>
+      <input id="city" name="city" type="text" required />
+
+      <label for="zip">ZIP</label>
+      <input id="zip" name="zip" type="text" />
+    </form>
+    <div class="note">Select all required inputs and set their border to red.</div>
+  </section>
+
+  <section id="task-13">
+    <h2>Task 13: Nested List Styling</h2>
+    <aside class="sidebar">
+      <h3>Categories</h3>
+      <ul class="category-list">
+        <li>Electronics</li>
+        <li>Clothing</li>
+        <li>Accessories</li>
+      </ul>
+    </aside>
+    <div class="note">Select all &lt;li&gt; elements that are inside a &lt;ul&gt; within .sidebar and set padding to 10px.</div>
+  </section>
+
+  <section id="task-14">
+    <h2>Task 14: Table Column Selection</h2>
+    <table id="ordersTable">
+      <thead>
+        <tr><th>Order #</th><th>Customer</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>#1023</td><td>Ada Lovelace</td><td>Shipped</td></tr>
+        <tr><td>#1024</td><td>Alan Turing</td><td>Processing</td></tr>
+        <tr><td>#1025</td><td>Grace Hopper</td><td>Delivered</td></tr>
+      </tbody>
+    </table>
+    <div class="note">Select only the 2nd column (&lt;td&gt; #2) in each row and make the text italic.</div>
+  </section>
+
+  <section id="task-15">
+    <h2>Task 15: Complex Query in Nav</h2>
+    <nav id="utilityNav">
+      <a href="#">Docs</a>
+      <a href="#" class="disabled">API</a>
+      <a href="#">Pricing</a>
+      <a href="#">Community</a>
+    </nav>
+    <div class="note">Select all &lt;a&gt; in this nav except those with .disabled and underline them.</div>
+  </section>
+
+  <section id="task-16">
+    <h2>Task 16: Form Label Highlight (Adjacent Sibling)</h2>
+    <form id="profileForm">
+      <label for="firstName">First Name</label>
+      <input id="firstName" name="firstName" type="text" required />
+
+      <label for="middleName">Middle Name</label>
+      <input id="middleName" name="middleName" type="text" />
+
+      <label for="lastName">Last Name</label>
+      <input id="lastName" name="lastName" type="text" required />
+    </form>
+    <div class="note">Select &lt;label&gt; elements that are immediately before a required &lt;input&gt; and make them bold.</div>
+  </section>
+
+  <!-- Optional Playground Hook (empty). You will write JS elsewhere. -->
+  <script>
+    // Intentionally left blank. Solve tasks using your own JS in console or external file.
+    // Task - 1 :
+    // 1) Highlight first <h1> (color red)
+    let h1 = document.querySelector("h1");
+    h1.style = "background-color: red;"
+
+    // Task - 2:
+    // 2) Change button #submitBtn text to "Send"
+    let button = document.getElementById("submitBtn");
+    button.innerText = "Send";
+
+    // Task - 3:
+    // 3) Count all <p>
+      let paragraph_count = document.querySelectorAll("p");
+      console.log(paragraph_count);
+      console.log(paragraph_count.length);
+
+    // Task - 4 :
+    // 4) Log all .product-name texts
+    let product_name = document.getElementsByClassName('product-name');
+    console.log(product_name.length);
+
+    Array.from(product_name).forEach(el => console.log(el.innerText));
+
+    //console.log();
+  </script>
+</body>
+</html>

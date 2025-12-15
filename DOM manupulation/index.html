@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM Manupulation</title>
+    <!-- <style></style> -->
+</head>
+<body>
+    <!-- <script src="document.js"></script> -->
+    <h1>window.document</h1>
+    <p>It will gives all the function and property that you can use as APIs.</p>
+    <button id="mode">Change Mode</button>
+    <img id="myImage" src="image.jpg" ale=""My Image">
+    <div id="info" > Hello </div>
+    <script>
+        // head element 
+        var headElement = document.head
+        console.log("head element : " , headElement);
+
+        // body element
+        var bodyElement = document.body
+        console.log("body element " , bodyElement);
+
+        //first element child 
+        var firstElement = bodyElement.firstElementChild;
+        console.log("first element of body : ", firstElement);
+
+        // last element child 
+        var lastElement = bodyElement.lastElementChild;
+        console.log("last element of body : " , lastElement)
+
+        // children 
+        var headChildren = headElement.children;
+        console.log("head element children : " , headChildren);
+
+        let mode = document.getElementById("mode");
+
+        // modify attribute
+        let myImage = document.getElementById("myImage");
+        myImage.setAttribute("alt","Your Image");
+
+        // add new attribute
+        const divElement = document.getElementById("info");
+        divElement.setAttribute("data-info","some additional info");
+       //  divElement.setAttribute("data-info",null);
+        divElement.removeAttribute("data-info");
+        console.log(divElement.hasAttribute("data-info"));
+    </script>
+</body>
+</html>

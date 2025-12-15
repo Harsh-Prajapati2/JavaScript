@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appendChild and append</title>
+
+
+</head>
+<body>
+    <h1 id="heading">appendChild VS append</h1>
+    <div id="parent">
+        good Morning!
+    </div>
+    <script>
+
+        // appendChild
+        var parentElement = document.getElementById("heading");
+        var childElement = document.createElement("div");
+        childElement.innerHTML = "Hello";
+        parentElement.appendChild(childElement);
+
+
+        // append
+        // creating elements
+        var parentElement = document.getElementById("parent");
+        var childElement = document.createElement("div");
+        var textNode = document.createTextNode("Hello World!");
+        // appending multiple element to parent element
+        parentElement.append(childElement,textNode);
+    </script>
+</body>
+</html>

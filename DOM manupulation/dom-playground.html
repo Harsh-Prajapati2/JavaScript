@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM Selectors Playground</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    section { border: 1px solid #ccc; padding: 15px; margin-bottom: 15px; border-radius: 8px; }
+    .red { color: red; }
+    .blue { color: blue; }
+    .highlight { background-color: yellow; }
+  </style>
+</head>
+<body>
+  <h1>Main Heading</h1>
+  <h2>Subheading One</h2>
+  <h2>Subheading Two</h2>
+
+  <section id="id-section">
+    <h3>Select by ID</h3>
+    <p id="unique-paragraph">This is a paragraph with a unique ID.</p>
+  </section>
+
+  <section id="class-section">
+    <h3>Select by Class</h3>
+    <p class="note">First note paragraph.</p>
+    <p class="note">Second note paragraph.</p>
+  </section>
+
+  <section id="tag-section">
+    <h3>Select by Tag</h3>
+    <p>Tag paragraph 1</p>
+    <p>Tag paragraph 2</p>
+    <p>Tag paragraph 3</p>
+  </section>
+
+  <section id="nested-section">
+    <h3>Nested Selectors</h3>
+    <div class="container">
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="attribute-section">
+    <h3>Attribute Selectors</h3>
+    <input type="text" name="username" placeholder="Username">
+    <input type="email" name="email" placeholder="Email">
+    <a href="https://example.com" target="_blank">Example Link</a>
+  </section>
+
+  <section id="combination-section">
+    <h3>Combination Selectors</h3>
+    <div class="card">
+      <p class="info">Card Info 1</p>
+      <p class="info highlight">Card Info 2 (Highlighted)</p>
+    </div>
+    <div class="card">
+      <p class="info">Card Info 3</p>
+    </div>
+  </section>
+
+  <section id="pseudo-section">
+    <h3>Pseudo-class Selectors</h3>
+    <ul>
+      <li>List Item 1</li>
+      <li>List Item 2</li>
+      <li>List Item 3</li>
+    </ul>
+  </section>
+
+  <section id="form-section">
+    <h3>Form Elements</h3>
+    <form>
+      <input type="text" placeholder="First Name">
+      <input type="text" placeholder="Last Name">
+      <input type="checkbox" checked> Subscribe
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+</body>
+</html>

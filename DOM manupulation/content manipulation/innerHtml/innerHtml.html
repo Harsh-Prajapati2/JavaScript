@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner Html</title>
+
+</head>
+<body>
+    <div id="myElement">Initial Content</div>
+    <script>
+        let element = document.getElementById("myElement");
+        let htmlContent = element.innerHTML;
+        console.log(htmlContent);
+        var el = `<h1> hello </h1>
+        <h1> hello </h1>
+        <h1> hello </h1>
+        <h1> hello </h1>`
+        element.innerHTML = el;
+        console
+        let updateHtmlContent = element.innerHTML;
+        console.log(updateHtmlContent);
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Selector</title>
+    <style>
+        body {
+    font-size: 20px;
+  }
+  .my-class {
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+  }
+  #my-id {
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+  }
+  button {
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+  } 
+    </style>
+    
+  </head>
+  <body>
+    <h1>DOM Selector</h1>
+    <p>
+      Select elements using querySelector and change their background color to
+      yellow:
+    </p>
+    <div class="my-class">This is a div with class "my-class"</div>
+    <div class="my-class">This is another div with class "my-class"</div>
+    <div id="my-id">This is a div with id "my-id"</div>
+    <button>Click me</button>
+    <script>
+        function changeBackgroundColor(selector) {
+  //Implement your function here
+    let color = document.querySelectorAll(selector);
+    console.log(color);
+    cl = Array.from(color);
+    for(let i=0;i<cl.length;i++){
+      cl[i].style.backgroundColor = "yellow";
+    }
+    // color.style.backgroundColor = "yellow";
+    //color.setAttribute("background-color","yellow");
+   // color.backgroundColor = yellow;
+    // using setAttribute
+    //Array.from(color).forEach(cl => cl.setAttribute("background-color", "yellow"));
+    
+}
+changeBackgroundColor(".my-class");
+//changeBackgroundColor("my-id");
+ changeBackgroundColor("#my-id");
+changeBackgroundColor("button");
+    </script>
+  </body>
+</html>
