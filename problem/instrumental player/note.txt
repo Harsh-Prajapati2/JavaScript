@@ -1,0 +1,19 @@
+You have an HTML file and CSS code that represents a Drumkit Player. 
+The HTML file contains buttons representing different drum sounds, 
+and the CSS code styles the elements. Your task is to complete the JavaScript code to make it a working drumkit player.
+
+Objective:
+Add a keypress event listener to all the buttons in the HTML file.
+When a specific key corresponding to a button is pressed, the corresponding sound should be played.
+Each button should also have a click event listener that triggers the same function as the keypress event.
+The following keys and their corresponding sound URLs should be used:
+1- Key 'w': Sound URL - Sound1
+2- Key 'a': Sound URL - Sound2
+3- Key 's': Sound URL - Sound3
+4- Key 'd': Sound URL - Sound4
+5- Key 'j': Sound URL - Sound5
+6- Key 'k': Sound URL - Sound6
+7- Key 'l': Sound URL - Sound7
+
+Note:
+You should use the Audio tag to play the sound files.

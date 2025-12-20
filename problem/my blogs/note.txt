@@ -1,0 +1,43 @@
+Problem statement
+You are tasked with creating a webpage that displays a list of blog posts. 
+Each blog post will include a title, a date, and content. 
+Your goal is to use JavaScript to dynamically generate and display blog posts on the page based on data 
+provided in an array.
+
+Objective:
+Write a function called addBlog that performs the following:
+
+Accept Input:
+The function should take one parameter, blog, which is an object with the following properties:
+title: A string representing the title of the blog post.
+date: A string representing the date of the blog post.
+content: A string representing the content of the blog post.
+
+
+Create HTML Structure:
+Create a new div element with the class blog-post.
+Create a div element with the class blog-header.
+Create an h2 element with the class blog-title and set its text to the title property of the blog object.
+Create a p element with the class blog-date and set its text to the date property of the blog object.
+Create a p element with the class blog-content and set its text to the content property of the blog object.
+
+
+Append Elements:
+Append the h2 (blog title) and p (blog date) elements to the div with the class blog-header.
+Append the div with the class blog-header to the div with the class blog-post.
+Append the p (blog content) to the div with the class blog-post.
+Append the entire div with the class blog-post to the ul element with the class blog-list.
+
+
+Iterate through Data:
+Call the addBlog function for each object in an array of blog data to populate the page(already called in the js file).
+
+
+Expected Output:
+The visual representation of the structure is as follows:
+Note:
+1. The function should be called for each blog post in an array of blog data. 
+2. The list of blog posts should be contained within an `ul` element with the class `blog-list`.
+
+Hint:
+Use classList.add() method and className property to add a class to an HTML element.

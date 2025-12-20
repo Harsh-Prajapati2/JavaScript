@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XHR Phases Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 15px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>XMLHttpRequest (XHR) Phases Demo</h2>
+    <button id="loadBtn">Load Data</button>
+
+    <pre id="output">Click the button to send XHR request...</pre>
+
+    <script>
+        document.getElementById("loadBtn").addEventListener("click", function () {
+
+            // A. Create XHR object
+            const xhr = new XMLHttpRequest();
+
+            // B. Open connection
+            xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts/1');
+
+            // C. Handle successful response
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    console.log("Request successful");
+                    console.log(xhr.responseText);
+                    document.getElementById("output").textContent = xhr.responseText;
+                } else {
+                    console.error("Server returned status:", xhr.status);
+                }
+            };
+
+            // Handle error
+            xhr.onerror = function () {
+                console.error("An error occurred during the request.");
+            };
+
+            // Track progress
+            xhr.onprogress = function (event) {
+                console.log(`Loaded ${event.loaded} bytes`);
+            };
+
+            // Optional: Track request state changes
+            xhr.onreadystatechange = function () {
+                console.log("ReadyState:", xhr.readyState);
+            };
+
+            // D. Send request
+            xhr.send();
+        });
+    </script>
+
+</body>
+</html>
