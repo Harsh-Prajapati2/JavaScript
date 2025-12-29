@@ -1,0 +1,24 @@
+body{
+    height: 100%;
+    width: 100%;
+    
+}
+#card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.card{
+    height: 400px;
+    width: 250px;
+    background: linear-gradient(rgb(236, 157, 157),rgb(125, 125, 226),rgb(224, 224, 117));
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;      */
+    justify-content: center; /* vertical center */
+    text-align: center;
+    margin: 20px;
+}
