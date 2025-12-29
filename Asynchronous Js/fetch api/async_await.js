@@ -15,23 +15,18 @@ function displayDetails(user){
             divElement.insertAdjacentHTML('beforeend',card);
 }
 
-function getDetails(id){
-
-    fetch(`https://dummyjson.com/users/${id}`)
-    .then((response)=> {
-        if (!response.ok) {
-            throw new Error(`HTTP Error: ${response.status}`);
+async function getDetails(id){
+    try{
+        const response = await fetch(`https://dummyjson.com/users/${id}`);
+        if(!response.ok){
+            throw new Error(`ID ${id} does not exists.`);
         }
-        return response.json()})
-    .then((user) => displayDetails(user))
-    .catch((error) => 
-        {
-            console.log(error);
-        });
-
-    // console.log(request.id);
+        const userdata = await response.json();
+        displayDetails(userdata);
+    }catch(err){
+        console.log(err);
+    }
 }
 
-for(let i=1;i<2;i++){
-    getDetails(i);
-}
+
+getDetails(0);
