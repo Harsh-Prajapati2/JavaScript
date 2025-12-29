@@ -8,17 +8,29 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     margin: 20px;
+    justify-content: center;
+    align-items: center;
 }
 .card{
     height: 400px;
-    width: 250px;
+    width: 300px;
     background: linear-gradient(rgb(236, 157, 157),rgb(125, 125, 226),rgb(224, 224, 117));
     color: white;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    /* align-items: center;      */
-    justify-content: center; /* vertical center */
+    align-items: center;     
+    justify-content: center; 
     text-align: center;
     margin: 20px;
+}
+
+.other{
+    height: 350px;
+    width: 250px;
+}
+
+.other:hover{
+    height: 400px;
+    width: 300px;
 }
